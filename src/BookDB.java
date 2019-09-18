@@ -1,7 +1,7 @@
 public class BookDB {
     private String sku;
     private String author;
-    private String bookname;
+    private String title;
     private String description;
     private double price;
 
@@ -10,7 +10,7 @@ public class BookDB {
 
     public BookDB(String author, String bookname, String description, double price) {
         this.author = author;
-        this.bookname = bookname;
+        this.title = title;
         this.description = description;
         this.price = price;
     }
@@ -31,12 +31,12 @@ public class BookDB {
         this.author = author;
     }
 
-    public String getBookname() {
-        return bookname;
+    public String getTitle() {
+        return title;
     }
 
-    public void setBookname(String bookname) {
-        this.bookname = bookname;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {
@@ -53,6 +53,11 @@ public class BookDB {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public void getDisplayText(){
+
+        System.out.println(getSku()+'\t'+'\t'+getTitle()+'\t'+'\t'+getAuthor()+'\t'+'\t'+getDescription()+'\t'+getPrice());
     }
 
 
